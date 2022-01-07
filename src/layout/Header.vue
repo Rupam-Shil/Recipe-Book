@@ -55,8 +55,8 @@
 			border-radius: 0.5rem;
 			box-shadow: 0 8px 5px hsl(0, 0%, 63%);
 			text-transform: capitalize;
-			margin-right: 2rem;
 			cursor: pointer;
+			margin-right: 2rem;
 			transition: 0.2s;
 			&:active {
 				box-shadow: 0 3px 5px hsl(0, 0%, 51%);
