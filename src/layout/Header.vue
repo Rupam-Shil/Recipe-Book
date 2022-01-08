@@ -3,7 +3,7 @@
 		<header>
 			<div class="logo">
 				<img src="../assets/logo.svg" alt="" />
-				<h2>Cookbook</h2>
+				<router-link to="/">Cookbook</router-link>
 			</div>
 			<button class="btn">Add new recipe</button>
 		</header>
@@ -41,7 +41,10 @@
 				aspect-ratio: 1;
 				transform: translateX(0);
 			}
-			h1 {
+			a {
+				color: var(--white);
+				font-size: 1.2rem;
+				text-decoration: none;
 				font-weight: 500;
 			}
 		}

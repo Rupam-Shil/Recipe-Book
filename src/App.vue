@@ -23,5 +23,25 @@ import Header from './layout/Header.vue';
 }
 body {
 	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+.btn {
+	outline: none;
+	border: none;
+	padding: 1rem 1.5rem;
+	font-size: 1.1rem;
+	background: var(--green);
+	color: var(--blue-text);
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 5px #001b3c !important;
+	text-transform: capitalize;
+	cursor: pointer;
+	margin-right: 2rem;
+	transition: 0.2s;
+	text-decoration: none !important;
+	&:active {
+		box-shadow: 0 4px 5px #001b3c !important;
+		transform: translateY(3px);
+	}
 }
 </style>
