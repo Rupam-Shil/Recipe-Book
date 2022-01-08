@@ -6,7 +6,7 @@
 		<div class="home-card-area">
 			<div class="box-area">
 				<Card
-					v-for="recipe in recipes.splice(0, 2)"
+					v-for="recipe in recipes.slice(recipes.length - 2, recipes.length)"
 					:key="recipe.id"
 					:recipe="recipe"
 				></Card>
@@ -28,6 +28,23 @@ const recipes = computed(() => store.state.recipes);
 </script>
 
 <style lang="scss">
+@media only screen and (max-width: 768px) {
+	.home {
+		height: max-content !important;
+		grid-template-columns: 1fr !important;
+		grid-template-rows: 1fr 1fr;
+		&-card-area {
+			height: max-content !important;
+			margin-bottom: 5rem;
+			.link-area {
+				bottom: -3rem !important;
+			}
+			.box-area {
+				height: 400px !important;
+			}
+		}
+	}
+}
 .home {
 	height: calc(100vh - 80px);
 	width: 100vw;

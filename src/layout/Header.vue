@@ -5,7 +5,7 @@
 				<img src="../assets/logo.svg" alt="" />
 				<router-link to="/">Cookbook</router-link>
 			</div>
-			<button class="btn">Add new recipe</button>
+			<router-link to="/new" class="btn">Add new recipe</router-link>
 		</header>
 	</div>
 </template>
@@ -13,6 +13,15 @@
 <script setup></script>
 
 <style lang="scss">
+@media only screen and (max-width: 768px) {
+	.header {
+		header {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+}
 .header {
 	width: 100vw;
 	height: 80px;
@@ -49,6 +58,9 @@
 			}
 		}
 		.btn {
+			@media only screen and (max-width: 768px) {
+				margin-right: 0;
+			}
 			outline: none;
 			border: none;
 			padding: 1rem 1.5rem;

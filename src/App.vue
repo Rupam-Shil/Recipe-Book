@@ -4,6 +4,11 @@
 </template>
 <script setup>
 import Header from './layout/Header.vue';
+import { useStore } from 'vuex';
+import { getLocalStorageItem } from './composables/setLocalItem';
+const store = useStore();
+
+store.commit('setRecipe', getLocalStorageItem());
 </script>
 
 <style lang="scss">
@@ -20,6 +25,7 @@ import Header from './layout/Header.vue';
 	--white: #fff;
 	--green: #2ae879;
 	--blue-text: #3f3d56;
+	--grey: rgb(136, 136, 136);
 }
 body {
 	font-family: 'Poppins', sans-serif;
@@ -33,14 +39,14 @@ body {
 	background: var(--green);
 	color: var(--blue-text);
 	border-radius: 0.5rem;
-	box-shadow: 0 4px 5px #001b3c !important;
+	box-shadow: 0 4px 8px #003474 !important;
 	text-transform: capitalize;
 	cursor: pointer;
 	margin-right: 2rem;
 	transition: 0.2s;
 	text-decoration: none !important;
 	&:active {
-		box-shadow: 0 4px 5px #001b3c !important;
+		box-shadow: 0 2px 5px #001b3c !important;
 		transform: translateY(3px);
 	}
 }

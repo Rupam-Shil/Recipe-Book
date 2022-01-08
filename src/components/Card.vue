@@ -39,6 +39,12 @@ const { recipe } = toRefs(props);
 	}
 	.card-description {
 		font-size: 0.9rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3; /* number of lines to show */
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
 	}
 	.box-shadow {
 		box-shadow: 0 4px 5px #001b3c !important;
